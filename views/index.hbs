@@ -1,12 +1,40 @@
-<form action="/form" method="post">
+{{>_nav}}
 
-<input type="text" placeholder="Name" name="name">
-<input type="Number" placeholder="Class" name="class">
-<input type="text" placeholder="Age" name="age">
-
-
-
-<input type="submit" value="Submit">
-
-
-</form>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Registration Info</h2>
+                    <form method="POST" action="/form">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birth">
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                        </div>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,51 @@
+body {
+    background-color: #BBDEFB
+}
+
+.bg-black {
+    background-color: #000
+}
+
+.navbar-brand {
+    padding: 11px 20px
+}
+
+.active {
+    background-color: blue
+}
+
+.navbar-nav {
+    width: 100%
+}
+
+.nav-link {
+    color: #fff !important
+}
+
+.nav-item {
+    padding: 6px 12px;
+    text-align: center
+}
+
+.nav-item:hover {
+    background-color: blue
+}
+
+.right {
+    margin-left: auto
+}
+
+.navbar-collapse.collapse.in {
+    display: block !important
+}
+
+@media (max-width: 992px) {
+    .right {
+        margin-left: 0
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: left
+    }
+}

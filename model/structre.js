@@ -4,13 +4,29 @@ const mongoose = require("mongoose");
 const structre = new mongoose.Schema({
 
     name:{
-        type:String
+        type:String,
+        required:true,
+        unique:true
     },
-    class:{
-        type:String
+    birth:{
+        type:Date,
+        required:true,
+        unique:true
     },
-    Age:{
-        type:String
+    Gender:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    email:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    phone:{
+        type:String,
+        required:true,
+        unique:true
     }
 })
 
