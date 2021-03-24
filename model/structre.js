@@ -15,7 +15,6 @@ const structre = new mongoose.Schema({
     },
     Gender:{
         type:String,
-        required:true,
         unique:true
     },
     email:{

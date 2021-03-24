@@ -4,6 +4,7 @@ const collection = require("../model/structre")
 const bodyParser = require("body-parser")
 const flash = require("connect-flash");
 const session = require("express-session");
+const auth = require("../middleware/auth")
 routes.use(flash())
 routes.use(session({
 	secret:'secret123',
@@ -41,8 +42,8 @@ routes.post("/form",async(req,res)=>{
     res.redirect("/show-data");
 })
 
-routes.get("/show",async(req,res)=>{
-    res.render('login');
+routes.get("/show",auth,async(req,res)=>{
+    res.render('dashboard');
 })
 routes.post("/login",async(req,res)=>{
     try{
